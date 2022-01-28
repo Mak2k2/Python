@@ -14,7 +14,7 @@ b = int(input("Введите делитель >>> "))
 
 try:
     if b == 0:
-        raise ZeroError(a)
+        raise ZeroError(b)
     else:
         print(a / b)
 except ZeroError as err:

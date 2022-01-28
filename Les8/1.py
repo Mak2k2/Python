@@ -15,17 +15,15 @@ class Date:
     @staticmethod
     def check(content: str):
         date = content.split('-')
-        if int(date[0]) > 31:
+        if int(date[0]) > 31 or int(date[0]) < 1:
             return("Неправильно указан день!")
-        elif int(date[1]) > 12:
+        elif 1 > int(date[1]) or int(date[1]) > 12:
             return("Неправильно указан месяц!")
-        elif int(date[2]) > 9999:
-            return("Неправильно указан год!")
-        elif len(date[2]) < 4:
+        elif len(date[2]) != 4:
             return("Неправильно указан год!")
         else:
             return str(date)
 
-print(Date.to_int("31-12-1212"))
+print(Date.to_int("1-1-2022"))
 
 
